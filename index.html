@@ -29,8 +29,14 @@
 				<h4>Cooper Park | Munus Shih</h4>
 			</section>
 
-			<section id="agenda-section">
+			<section>
 				<h2>What we're doing today</h2>
+				<div class="container">
+					<div class="col" id="agenda-section"></div>
+					<div class="col"><img
+							src="https://media.tenor.com/Ojw-8DgU0rYAAAAC/to-do-list-nothing.gif">
+					</div>
+				</div>
 				<script>
 					const agendaItems = ['Hello!', 'Syllabus Overview', 'Land Acknowledgement', 'Discord + Community Agreements', 'Break Time!', 'Lecture Discussion', 'Activity: Lost in Translation'];
 
@@ -74,7 +80,7 @@
 								shows 🏳️‍🌈</li>
 							<li class="fragment visible current-fragment"
 								data-fragment-index="5">Excited to learn all the
-								weird web things we can do w/ all of you!</li>
+								weird code things we can do w/ all of you!</li>
 						</ul>
 					</div>
 
@@ -87,10 +93,16 @@
 				</div>
 			</section>
 
-			<section id="intro">
+			<section>
 				<h2>Your Turn!</h2>
+				<div class="container">
+					<div class="col"><img
+							src="https://media.tenor.com/NbKpeYSqZsIAAAAM/trixie-mattel.gif">
+					</div>
+					<div class="col" id="intro"></div>
+				</div>
 				<script>
-					const instruct = ['Your name? Pronouns?', 'Where do you call home?', 'Background', 'Passionate About?', 'Something exciting going on', 'What you hope to learn from this course?'];
+					const instruct = ['Your name? Pronouns?', 'Where do you call home?', 'Background?', 'Passionate About?', 'Something exciting going on?', 'What you hope to learn from this course?'];
 
 					generateItem('intro', '<ul>', generateListItems.bind(null, instruct), '</ul>');
 				</script>
@@ -142,23 +154,60 @@
 
 			<section class="left">
 				<h2>Grading Policy</h2>
+				<div class="container">
+
+					<div class="col"><img
+							src="https://media1.giphy.com/media/qAtZM2gvjWhPjmclZE/giphy.gif">
+					</div>
+					<div class="col">
+						<ul
+							style="display:flex; flex-direction: column; gap: 1em;">
+							<li>
+								<u>Not based on comparing your work with
+									other students.</u> Your performance will be
+								evaluated on its own merits.
+							</li>
+							<li>
+								<u>Not prioritize code efficiency or
+									professionalism as
+									the
+									primary criteria.</u> Instead, we focus on
+								your
+								understanding of concepts and ability to apply
+								them
+								in a meaningful way.
+							</li>
+							<li>
+								We value the learning process and recognize that
+								everyone progresses
+								at their own pace. Should you have any inquiries
+								regarding grading, please don't hesitate to
+								reach out to
+								me directly.
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+
+			<section class="left">
+				<h2>Assignment Late Submission</h2>
 				<ul style="display:flex; flex-direction: column; gap: 1em;">
 					<li>
-						Not based on comparing your work with
-						other students. Your performance will be
-						evaluated on its own merits.
+						Assignments are due on the specified date and time
+						mentioned in the course instructions.
 					</li>
 					<li>
-						Not prioritize code efficiency or professionalism as the
-						primary criteria. Instead, we focus on your
-						understanding of concepts and ability to apply them
-						in a meaningful way.
+						We understand that sometimes life gets busy, so late
+						submissions are allowed. For each week your assignment
+						is late, we'll deduct a small percentage from your
+						score.
 					</li>
 					<li>
-						The number of hours you spend on an assignment is not
-						the determining factor in your grade. We value the
-						learning process and recognize that everyone progresses
-						at their own pace.
+						If something unexpected happens
+						(like a medical emergency or a family issue), let us
+						know. We'll work with you to find a fair solution, like
+						an extended deadline.
 					</li>
 				</ul>
 			</section>
@@ -185,14 +234,26 @@
 			</section>
 
 			<section class="left">
-				<h2>Discord</h2>
-				<p>We will only use it for reading responses and resource
-					sharing.</p>
-				<p>Please email me at <br> munusshih@newschool.edu if you need
-					sick leaves.</p>
+				<div class="container">
+					<div class="col"><img
+							src="https://media4.giphy.com/media/Fo5y4K3GD3RYijvsCS/giphy.gif?cid=6c09b9524xk3gzvsgzkobqdm3e96i4fs9t9xcrrhknnjyn5y&ep=v1_gifs_search&rid=giphy.gif&ct=s">
+					</div>
+					<div class="col">
+						<h2>Discord</h2>
+						<p>We will only use it for reading responses and
+							resource
+							sharing.</p>
+						<p>Please email me at <br>
+							<u>munusshih@newschool.edu</u> if you
+							need
+							sick leaves.
+						</p>
+					</div>
+				</div>
 			</section>
 
 			<section class="left">
+				<section></section>
 				<h2>Community Agreements</h2>
 				<p>In a group of 3. Discuss the following questions and
 					answer them in discord as a group.</p>
@@ -414,6 +475,12 @@
 				</div>
 			</section>
 
+			<section>
+				<h2>Hex Codes</h2>
+				<img
+					src="https://d3ui957tjb5bqd.cloudfront.net/uploads/2021/10/28052326/hex-rgb-breakdown-1024x718.jpg">
+			</section>
+
 			<section data-auto-animate data-auto-animate-unmatched="fade">
 				<h3>Draw a Green Circle with Red Stroke</h3>
 				<pre data-id="code"><code data-line-numbers class="hljs javascript language-javascript" data-trim>
@@ -428,6 +495,12 @@
 			<section data-auto-animate data-auto-animate-unmatched="fade">
 				<h3>Draw a Green Circle with Red Stroke, and another blue circle
 					with green stroke on it</h3>
+				<iframe width="100%" class="bg-white h-[30vh]" src="
+					https://openprocessing.org/sketch/create"></iframe>
+			</section>
+
+			<section data-auto-animate data-auto-animate-unmatched="fade">
+				<h3>My Drawing Is TOO SMALL</h3>
 				<iframe width="100%" class="bg-white h-[30vh]" src="
 					https://openprocessing.org/sketch/create"></iframe>
 			</section>
@@ -474,11 +547,13 @@
 
 			<section class="left">
 				<h2>Challenge</h2>
-				<p>1. RGB is one way to describe colors, what are some other
-					ways to define colors in the web?</p>
-				<p>2. How can we "group" elements in p5 so it's easier to draw
-					and use them?</p>
-				<p>3. What is p5? What can it do and limitation?</p>
+				<ol>
+					<li>1RGB is one way to describe colors, what are some other
+						ways to define colors in the web?</li>
+					<li>How can we "group" elements in p5 so it's easier to draw
+						and use them?</li>
+					<li>What is p5? What can it do and limitation?</li>
+				</ol>
 			</section>
 
 			<section
@@ -495,7 +570,8 @@
 				<h1>Assignment</h1>
 			</section>
 
-			<section>
+			<section
+				data-background-iframe="https://openprocessing.org/sketch/1993527/embed/?plusEmbedHash=OWVkYTk3YmE5ZDMyNjAyMTE2YjEwMTIyZjJjMTRiNTliYzE3ZTc1OTFhMDExOTBhMTdiNzY1ODRjMzU5NWNjMjE1NDI3OTZkMjUyMmY1ZWZhYWQ0MGFjZTU5ZWM5Y2I4MDI4MjIyY2Y1Y2FkOTFlNjdiMjUyYWE2MjA2Y2FmYTJiaURtMUNkL2s2MU53OUNmMklUc1k2cjdjeGhJRmhsMndyNWNXblUxZ2xIWHlXTDg5OGdFWFVxS3RlRjBIVThxb3R4NGpxQ3NTZk9naW41Tjd1bHRsdz09&plusEmbedTitle=true">
 				<h2>See you Next Week!</h2>
 				<p>For questions, pls email me at munusshih@newschool.edu</p>
 			</section>
