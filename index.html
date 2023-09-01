@@ -6,41 +6,500 @@
 	<meta name="viewport"
 		content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-	<title>reveal.js</title>
+	<title>CC Lab Week 1 | Hello!</title>
 
 	<link rel="stylesheet" href="dist/reset.css">
 	<link rel="stylesheet" href="dist/reveal.css">
 	<link rel="stylesheet" href="dist/theme/dracula.css">
+	<script src="https://cdn.tailwindcss.com"></script>
 
 	<!-- Theme used for syntax highlighted code -->
-	<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	<script src="plugin/highlight/highlight.js"></script>
+	<link rel="stylesheet" href="plugin/highlight/dracula.min.css">
 </head>
 
 <body>
 	<div class="reveal">
 		<div class="slides">
-			<section>
-				<h1>Demo Presentation</h1>
+
+			<section
+				data-background-iframe="https://openprocessing.org/sketch/1992588/embed/?plusEmbedHash=NTAxYzE1Njc0YTIxMjQwNTdjMTc1NzU2ODk2ZDkwMTBhNmFkODEzZTUxNmMxNmNlY2JjYzFkZDY4ODc4NjBmMWJhMmU3NmQ3ZDY0ZGMyZDRkMWNkNTEyZDI0MzU4Nzc0MGU0OGFhODE2MjMwMjFlYWU3NzkwODY3MDkzNzZhNGNjcW9tQmZwRm4yNFQrdk5YOHVUUUdKM1E1b1NoMysrWWFaYlErYlF0Z280U2NNT0cvd2JuSCszUFYyYW1LeWxHbCtGUTU3bFFkL3E5MmhTQ3Z5amI0Zz09&plusEmbedFullscreen=true">
+				<p>week 1</p>
+				<h1>CC Club</h1>
+				<h4>Cooper Park | Munus Shih</h4>
 			</section>
-			<section>
-				<h2>I'm a Sub Heading</h2>
-				<p>Here is some content.</p>
-				<p>and more content!</p>
+
+			<section id="agenda-section">
+				<h2>What we're doing today</h2>
+				<script>
+					const agendaItems = ['Hello!', 'Syllabus Overview', 'Land Acknowledgement', 'Discord + Community Agreements', 'Break Time!', 'Lecture Discussion', 'Activity: Lost in Translation'];
+
+					function generateItem(id, openingTag, callback, closingTag) {
+						const selectedEl = document.getElementById(id);
+						let htmlElement = openingTag;
+						htmlElement += callback(); // Call the callback function here
+						htmlElement += closingTag;
+						selectedEl.innerHTML += htmlElement;
+					}
+
+					function generateListItems(list) {
+						let itemsHTML = '';
+						list.forEach((item, index) => {
+							itemsHTML += `<li class="fragment" data-fragment-index="${index + 1}">${item}</li>`;
+						});
+						return itemsHTML;
+					}
+
+					generateItem('agenda-section', '<ul>', generateListItems.bind(null, agendaItems), '</ul>');
+				</script>
 			</section>
-			<section>
-				<p>This will remain visible for all vertical slides</p>
-				<section>Here is some vertical content</section>
-				<section>and some more</section>
-				<section>more stuff...</section>
+
+			<section id="munus">
+				<h2>About Me</h2>
+
+				<div class="container">
+
+					<div class="col">
+						<ul>
+							<li class="fragment visible"
+								data-fragment-index="1">Taiwanese Hakka</li>
+							<li class="fragment visible"
+								data-fragment-index="2">Creative Technologist
+							</li>
+							<li class="fragment visible"
+								data-fragment-index="3">Generative Design, Web
+								Development, and Data Viz...</li>
+							<li class="fragment visible"
+								data-fragment-index="4">Pls recommend me queer
+								shows 🏳️‍🌈</li>
+							<li class="fragment visible current-fragment"
+								data-fragment-index="5">Excited to learn all the
+								weird web things we can do w/ all of you!</li>
+						</ul>
+					</div>
+
+					<div class="col">
+						<img
+							src="https://munusshih.github.io/p5-genzine-thesis/images/image4.jpg">
+						<p>Munus Shih (he/him)</p>
+					</div>
+
+				</div>
 			</section>
+
+			<section id="intro">
+				<h2>Your Turn!</h2>
+				<script>
+					const instruct = ['Your name? Pronouns?', 'Where do you call home?', 'Background', 'Passionate About?', 'Something exciting going on', 'What you hope to learn from this course?'];
+
+					generateItem('intro', '<ul>', generateListItems.bind(null, instruct), '</ul>');
+				</script>
+			</section>
+
 			<section>
-				<h2>Fragments in Custom Order</h2>
-				<ul>
-					<li class="fragment" data-fragment-index="3">Third</li>
-					<li class="fragment" data-fragment-index="2">Second</li>
-					<li class="fragment" data-fragment-index="1">First</li>
+				<h2>Syllabus Overview</h2>
+				<iframe data-autoplay width="100%" height="540"
+					src="https://docs.google.com/document/d/1-TxTPNrrYog83fFFQhcrCnu-JpKgvyYsQMeHyy5ThPA/edit#heading=h.o00ru69ktat9"></iframe>
+			</section>
+
+			<section>
+				<h2>Grading</h2>
+				<table>
+					<thead style="color:var(--r-link-color-dark)">
+						<tr>
+							<th>Requirements</th>
+							<th>% of Total Grade</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Attendance</td>
+							<td>15%</td>
+						</tr>
+						<tr>
+							<td>Participation & Discussions</td>
+							<td>15%</td>
+						</tr>
+						<tr>
+							<td>Assignment #1~6</td>
+							<td>30%</td>
+						</tr>
+						<tr>
+							<td>Assignment #7</td>
+							<td>20%</td>
+						</tr>
+						<tr>
+							<td>Assignment #8~9</td>
+							<td>10%</td>
+						</tr>
+						<tr>
+							<td>Portfolio submission</td>
+							<td>10%</td>
+						</tr>
+					</tbody>
+				</table>
+			</section>
+
+			<section class="left">
+				<h2>Grading Policy</h2>
+				<ul style="display:flex; flex-direction: column; gap: 1em;">
+					<li>
+						Not based on comparing your work with
+						other students. Your performance will be
+						evaluated on its own merits.
+					</li>
+					<li>
+						Not prioritize code efficiency or professionalism as the
+						primary criteria. Instead, we focus on your
+						understanding of concepts and ability to apply them
+						in a meaningful way.
+					</li>
+					<li>
+						The number of hours you spend on an assignment is not
+						the determining factor in your grade. We value the
+						learning process and recognize that everyone progresses
+						at their own pace.
+					</li>
 				</ul>
 			</section>
+
+			<section class="left">
+				<h2>Open Source Policy</h2>
+				<p style="text-align:left; font-size: 2rem;">
+					You are encouraged to help each other out with programming,
+					but unless otherwise specified you must turn in your OWN
+					work.
+					<br><br>
+					Copying/pasting and reusing code is a key part of the
+					programming process. You often
+					learn best by modifying working examples rather than
+					starting from scratch. We stand on the shoulders of giants;
+					that’s the essence of the open-source philosophy. However,
+					there is a very important caveat: any open-source code you
+					borrow and/or modify must be labeled as such.
+				</p>
+			</section>
+
+			<section>
+				<h2>Questions?</h2>
+			</section>
+
+			<section class="left">
+				<h2>Discord</h2>
+				<p>We will only use it for reading responses and resource
+					sharing.</p>
+				<p>Please email me at <br> munusshih@newschool.edu if you need
+					sick leaves.</p>
+			</section>
+
+			<section class="left">
+				<h2>Community Agreements</h2>
+				<p>In a group of 3. Discuss the following questions and
+					answer them in discord as a group.</p>
+				<ul>
+					<li>
+						How can we better faciliate you to learn? What do you
+						need from us?
+					</li>
+					<li>
+						When faced with a situation where someone's work or
+						words are considered offensive or harmful, how should we
+						approach the discussion in line with the agreement's
+						principles of growth and learning?
+					</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>Break Time!</h2>
+			</section>
+
+			<section
+				data-background-iframe="https://openprocessing.org/sketch/1992588/embed/?plusEmbedHash=NTAxYzE1Njc0YTIxMjQwNTdjMTc1NzU2ODk2ZDkwMTBhNmFkODEzZTUxNmMxNmNlY2JjYzFkZDY4ODc4NjBmMWJhMmU3NmQ3ZDY0ZGMyZDRkMWNkNTEyZDI0MzU4Nzc0MGU0OGFhODE2MjMwMjFlYWU3NzkwODY3MDkzNzZhNGNjcW9tQmZwRm4yNFQrdk5YOHVUUUdKM1E1b1NoMysrWWFaYlErYlF0Z280U2NNT0cvd2JuSCszUFYyYW1LeWxHbCtGUTU3bFFkL3E5MmhTQ3Z5amI0Zz09&plusEmbedFullscreen=true">
+				<div>
+					<h2>Lecture Discussion</h2>
+				</div>
+				<section>
+					<h3>Q1: What is code? (6 mins)</h3>
+					<p>Recall an experience from your personal
+						life or culture that, while not directly involving a
+						computer, can be interpreted as a form of <span>hidden
+							code</span>.
+						Delve into the specifics of this activity and elaborate
+						on why you perceive it as a coded process.</p>
+				</section>
+				<section>
+					<h3>Q2: Why are we learning code? What is critical code? (6
+						mins)</h3>
+					<p>Technology is political. Why are we learning code in this
+						class, and why is it called "critical computation"
+						instead of something else? How is it different from any
+						other coding class in computer science, graphic design
+						departments? </p>
+				</section>
+			</section>
+
+			<section class="left">
+				<h3>Some questions to think about:</h3>
+				<p>Who calls themselves "coder"? Who controls the narratives?
+				</p>
+				<p>How do issues of diversity and inclusion intersect with the
+					world of coding and technology?</p>
+			</section>
+
+			<section>
+				<h2>Can a Programming Language be a Radical Community?
+				</h2>
+				<iframe
+					src="https://www.artistsandhackers.org/programming-radical-community"
+					width="100%" class="bg-white h-[30vh]"></iframe>
+			</section>
+
+			<section class="left">
+				<h2>Activity: Lost in Translation</h2>
+				<section>
+					<div class="container">
+						<div class="col">
+							<img
+								src="https://media.tenor.com/VYnja0QsMkwAAAAC/do-you-want-to-chat-wanna-chat.gif">
+						</div>
+						<div class="col">
+							<p>While we often think of coding in terms of
+								communicating with
+								the computer by giving it instructions to
+								follow,
+								this is
+								only really one part of the larger process of
+								computation.</p>
+						</div>
+					</div>
+				</section>
+				<section>
+					<div class="container">
+						<div class="col">
+							<img src="https://i.gifer.com/FEXr.gif">
+						</div>
+						<div class="col">
+							<p>Just like with other creative mediums, it may
+								start out as writing or a drawing, coding
+								is the same way. Today we will be exploring this
+								process by emphasizing each part and turning it
+								into a collaborative group activity involving
+								you and your peers.
+							</p>
+						</div>
+					</div>
+				</section>
+				<section>
+					<div class="container">
+						<div class="col">
+							<iframe src="https://pickerwheel.com/" width="100%"
+								class="bg-white h-[30vh]"></iframe>
+						</div>
+						<div class="col">
+							<h4>Stage 1: Writing</h4>
+							<p>Think of objects that can be built with simple
+								primitives, with adjs better.</p>
+							<p>Such as "a happy black cat with round ears"</p>
+						</div>
+					</div>
+				</section>
+				<section>
+					<div class="container">
+						<div class="col">
+							<img
+								src="https://golancourses.net/2022f/wp-content/uploads/2022/09/one_with_everything.png">
+						</div>
+						<div class="col">
+							<h4>Stage 2: Stroke Drawing</h4>
+							<p>Work in group to draw the prompt on the grid
+								paper. Make sure you're using primitive shapes
+								and matches the grid paper.</p>
+							<p>Stroke Color matters!</p>
+						</div>
+					</div>
+				</section>
+				<section>
+					<div class="container">
+						<div class="col">
+							<img
+								src="https://thumbs.gfycat.com/GrandShyBlueandgoldmackaw-size_restricted.gif">
+						</div>
+						<div class="col">
+							<h4>Stage 3: Color In</h4>
+							<p>Work in group to color the shapes!</p>
+							<p>Coloring matters!</p>
+						</div>
+					</div>
+				</section>
+				<section>
+					<div class="container">
+						<div class="col">
+							<img
+								src="https://i.makeagif.com/media/3-15-2016/23lX7d.gif">
+						</div>
+						<div class="col">
+							<h4>Stage 4: Written Code!</h4>
+							<p>Now we need to think like a computer/coder.</p>
+						</div>
+					</div>
+				</section>
+			</section>
+
+			<section
+				data-background-iframe="https://openprocessing.org/sketch/create">
+			</section>
+
+			<section data-auto-animate data-auto-animate-unmatched="fade">
+				<h3>Draw a Circle</h3>
+				<pre data-id="code"><code data-line-numbers class="hljs javascript language-javascript" data-trim>
+					function draw() {
+					  circle(50, 50, 100);
+					}
+				</code></pre>
+			</section>
+
+			<section data-auto-animate data-auto-animate-unmatched="fade">
+				<h3>Draw a Green Circle</h3>
+				<pre data-id="code"><code data-line-numbers class="hljs javascript language-javascript" data-trim>
+					function draw() {
+					  fill('green');
+					  circle(50, 50, 100);
+					}
+				</code></pre>
+			</section>
+
+			<section data-auto-animate data-auto-animate-unmatched="fade">
+				<h3>Draw a Green Circle with Red Stroke</h3>
+				<pre data-id="code"><code data-line-numbers class="hljs javascript language-javascript" data-trim>
+					function draw() {
+					  fill(0, 255, 0); //RGB
+					  stroke('red');
+					  circle(50, 50, 100);
+					}
+				</code></pre>
+			</section>
+
+			<section
+				data-background-iframe="//a.atmos.washington.edu/~ovens/javascript/colorpicker.html"
+				data-background="white">
+			</section>
+
+			<section>
+				<div class="container left">
+					<div class="col"><img
+							src="https://cdnb.artstation.com/p/assets/images/images/045/143/909/original/alessandro-di-carluccio-ezgif-com-gif-maker-8.gif?1642014517">
+					</div>
+					<div class="col">You have probably heard that computer
+						screens consist of tiny dots, called pixels, and that
+						each pixel has a colour composed of three “elementary”
+						colours: red, green, and blue. To do that, each pixel
+						consists of three smaller “dots” that shine in different
+						colours.</div>
+				</div>
+			</section>
+
+			<section>
+				<div class="container left">
+					<div class="col"><img
+							src="https://cdnb.artstation.com/p/assets/images/images/045/143/909/original/alessandro-di-carluccio-ezgif-com-gif-maker-8.gif?1642014517">
+					</div>
+					<div class="col">Do you see how always one red, one green,
+						and one blue bar form a square? That’s a pixel, the
+						smallest dot you can see on your screen. You cannot see
+						the little colour bars with the naked eye; modern
+						computer screens have such a high resolution that the
+						only way for us to see them is to use some sort of
+						magnifying glass.</div>
+				</div>
+			</section>
+
+			<section data-auto-animate data-auto-animate-unmatched="fade">
+				<h3>Draw a Green Circle with Red Stroke</h3>
+				<pre data-id="code"><code data-line-numbers class="hljs javascript language-javascript" data-trim>
+					function draw() {
+					  fill('0, 255, 0'); //RGB
+					  stroke('#ff0000');
+					  circle(50, 50, 100);
+					}
+				</code></pre>
+			</section>
+
+			<section data-auto-animate data-auto-animate-unmatched="fade">
+				<h3>Draw a Green Circle with Red Stroke, and another blue circle
+					with green stroke on it</h3>
+				<iframe width="100%" class="bg-white h-[30vh]" src="
+					https://openprocessing.org/sketch/create"></iframe>
+			</section>
+
+			<section data-auto-animate data-auto-animate-unmatched="fade">
+				<h3>Other functions</h3>
+				<iframe width="100%" class="bg-white h-[30vh]" src="
+				https://p5js.org/reference/"></iframe>
+			</section>
+
+			<section class="left">
+				<h2>Activity: Lost in Translation</h2>
+				<section>
+					<div class="container">
+						<div class="col">
+							<img
+								src="https://i.makeagif.com/media/3-15-2016/23lX7d.gif">
+						</div>
+						<div class="col">
+							<h4>Stage 4: Written Code!</h4>
+							<p>Write out steps of the instructions that we need
+								to do to
+								put the drawing into code</p>
+							<p>1. fill('blue')</p>
+							<p>2. draw the ears</p>
+							<p>3. fill('brown')</p>
+							<p>4. draw the face</p>
+						</div>
+					</div>
+				</section>
+				<section>
+					<div class="container">
+						<div class="col">
+							<img
+								src="https://i.pinimg.com/originals/6c/90/28/6c90288d7e10d46d18895f17f420a92c.gif">
+						</div>
+						<div class="col">
+							<h4>Stage 5: Coding!</h4>
+							<p>Open p5 to type out these codes in p5.js</p>
+						</div>
+					</div>
+				</section>
+			</section>
+
+			<section class="left">
+				<h2>Challenge</h2>
+				<p>1. RGB is one way to describe colors, what are some other
+					ways to define colors in the web?</p>
+				<p>2. How can we "group" elements in p5 so it's easier to draw
+					and use them?</p>
+				<p>3. What is p5? What can it do and limitation?</p>
+			</section>
+
+			<section
+				data-background-iframe="https://parsonsdt.github.io/critical-computation-2023/tutorials.html">
+				<h1>Tutorials</h1>
+			</section>
+
+			<section data-background-iframe="https://openprocessing.org/">
+				<h1>Open Processing</h1>
+			</section>
+
+			<section
+				data-background-iframe="https://parsonsdt.github.io/critical-computation-2023/assignment-1.html">
+				<h1>Assignment</h1>
+			</section>
+
+			<section>
+				<h2>See you Next Week!</h2>
+				<p>For questions, pls email me at munusshih@newschool.edu</p>
+			</section>
+
 		</div>
 	</div>
 
@@ -53,7 +512,10 @@
 		// - https://revealjs.com/initialization/
 		// - https://revealjs.com/config/
 		Reveal.initialize({
+			controls: true,
+			progress: true,
 			hash: true,
+			margin: 0.2,
 
 			// Learn about plugins: https://revealjs.com/plugins/
 			plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
